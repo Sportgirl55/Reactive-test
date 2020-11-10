@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги и сервисы Пермского края</title>
+  
+</head>
+
+<!-- HEADER -->
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="wrap">
+        <div class="upper-logo">
+          <img src="img/logo.png" alt="logo">
+          <span>Услуги и сервисы Пермского края</span>
+        </div>
+        <div class="login">
+          <img src="img/user_icon.png" alt="user icon">
+          <a class="username" href="#0">Константинопольский К.К</a>
+          <a href="#0">Выйти</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+
+  <main class="main">
+    <div class="container text">
+      <div class="main-wrap">
+        <h1>Выдача градостроительного плана земельного участка</h1>
+        <p>
+          Градостроительный план земельного участка выдается в целях обеспечения субъектов
+          градостроительной деятельности информацией, необходимой для архитектурно-строительного
+          проектирования, строительства, реконструкции объектов капитального строительства в границах
+          земельного участка.
+        </p>
+      </div>
+      <aside class="logo">
+        <img src="img/eagle.png" alt="emblem">
+        <span>Услугу предоставляет</span>
+        <span>Орган местного самоуправления</span>
+      </aside>
+    </div>
+
+    <!-- FORM -->
+
+    <div class="container column">
+      <div class="main-wrap" id="main">
+
+            <!-- FIRST BLOCK 'CHOOSE' -->
+
+          <section class="choose">
+            <div class="form-item" data-state="active">
+              <div class="wrapper-form">
+                <div class="box-number">
+                  <span>1</span>
+                </div>
+                <h2>Выбор заявителя</h2>
+              </div>
+              <form action="submit">
+                <fieldset class="form-box">
+                  <label class="radio-item" for="radio1">
+                    <input class="radio" type="radio" name="radio-item" id="radio1" value="individual">
+                    <span class="radio-text-up">Константинопольский К.К.</span><br>
+                    <span class="radio-text-down">Физическое лицо</span>
+                  </label>
+    
+                  <label class="radio-item" for="radio2">
+                    <input class="radio" type="radio" name="radio-item" id="radio2" value="individual">
+                    <span class="radio-text-up">ООО «Константинополь»</span><br>
+                    <span class="radio-text-down">Юридическое лицо</span>
+                  </label>
+                  <button class="button" id="btn1">
+                    <a class="btn-text" href="#0">Продолжить</a>
+                  </button>
+                </fieldset>
+              </form>
+            </div>
+    
+            <div class="form-item hidden" data-state="checked">
+              <div class="wrapper-form checked">
+                <div class="box-number">
+                  <img src="img/check_mark.png" alt="">
+    
+                </div>
+                <h2>Выбор заявителя</h2>
+                <div class="change">
+                  <a href="#0"><img src="img/change_icon.png" alt="change icon"></a>
+                  <a href="#0">Изменить</a>
+                </div>
+              </div>
+            </div>
+          </section>
+    
+          <!-- SECOND BLOCK 'DATA' -->
+          <section class="data">
+            <div class="form-item" data-state="hidden">
+              <div class="wrapper-form closed">
+                <div class="box-number">
+                  <span>2</span>
+                </div>
+                <h2>Данные заявителя</h2>
+              </div>
+            </div>
+
+            <div class="form-item" data-state="active">
+              <div class="wrapper-form">
+                <div class="box-number">
+                  <span>2</span>
+                </div>
+                <h2>Данные заявителя</h2>
+              </div>
+              <form action="submit">
+                <fieldset class="form-box">
+                  <div class="form-group">
+                    <p>
+                      <label for="surname">Фамилия</label>
+                      <input class="field" type="text" name="surname" placeholder="Например: Константинопольский" required>
+                    </p>
+                  </div>
+                  <div class="form-group">
+                    <p>
+                      <label for="name">Имя</label>
+                      <input class="field" type="text" name="name" placeholder="Например: Константин" required>
+                    </p>
+                  </div>
+                  <div class="form-group">
+                    <p>
+                      <label for="middle-name">Отчество</label>
+                      <input class="field" type="text" name="middle-name" placeholder="Например: Константинович" required>
+                    </p>
+                  </div>
+                
+                  <div class="form-group">
+                    <p>
+                      <label for="email">"Электронная почта</label>
+                      <input class="field" type="email" name="email" placeholder="Например: 123@mail.ru" required>
+                    </p>
+                  </div>
+
+                  <div class="form-group">
+                    <p>
+                      <label for="tel">Телефон</label>
+                      <input class="field" type="tel" name="tel" placeholder="+7" required>
+                    </p>
+                  </div>
+                </fieldset>
+                <fieldset class="form-box">
+                  <legend>Документ, удостоверяющий личность</legend>
+
+                  <div class="document">
+                    <div class="form-group">
+                      <p>
+                        <label for="document">Документ</label>
+                        <input class="field" type="text" name="document" placeholder="Например: паспорт" required>
+                      </p>
+                    </div>
+                    <div class="form-group">
+                      <p>
+                        <label for="series">Серия</label>
+                        <input class="field" type="number" min="1000" max="9999" name="series" placeholder="" required>
+                      </p>
+                    </div>
+  
+                    <div class="form-group">
+                      <p>
+                        <label for="number">Номер</label>
+                        <input class="field" type="number" min="100000" max="999999" name="number" placeholder="" required>
+                      </p>
+                    </div>
+                  </div>
+                 
+                  <div class="issue-date">
+                    <legend>Когда выдан</legend>
+                    <div class="form-group">
+                      <p>
+                        <label for="date">День</label>
+                        <input class="field" type="number" min="01" max="31" name="date" placeholder="" required>
+                      </p>
+                    </div>
+                    <div class="form-group">
+                      <p>
+                        <label for="month">Месяц</label>
+                        <input class="field" type="number" min="1" max="12" name="month" placeholder="" required>
+                      </p>
+                    </div>
+
+                    <div class="form-group">
+                      <p>
+                        <label for="year">Год</label>
+                        <input class="field" type="number" name="year" placeholder="" required>
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <button class="button" id="btn2">
+                    <a class="btn-text" href="#0">Продолжить</a>
+                  </button>
+                </fieldset>
+              </form>
+            </div>
+
+            <div class="form-item hidden" data-state="checked">
+              <div class="wrapper-form checked">
+                <div class="box-number">
+                  <img src="img/check_mark.png" alt="">
+                </div>
+                <h2>Данные заявителя</h2>
+                <div class="change">
+                  <a href="#0"><img src="img/change_icon.png" alt="change icon"></a>
+                  <a href="#0">Изменить</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!--     THIRD BLOCK 'CONSENT' -->
+          <section class="consent">
+            <div class="form-item" data-state="hidden">
+              <div class="wrapper-form closed">
+                <div class="box-number">
+                  <span>3</span>
+                </div>
+                <h2>Согласие</h2>
+              </div>
+            </div>
+
+            <div class="form-item hidden" data-state="active">
+              <div class="wrapper-form">
+                <div class="box-number">
+                  <span>3</span>
+                </div>
+                <h2>Согласие</h2>
+              </div>
+              <form action="">
+                <fieldset class="form-box">
+                  <h3>Требуется ваше согласие по следующим пунктам:</h3>
+                  <ul class="consent">
+                    <li>Я подтверждаю, что вся представленная информация является достоверной и точной;</li>
+                    <li>Я несу ответственность в соответствии с действующим законодательством Российской Федерации за предоставление заведомо ложных или неполных сведений;</li>
+                    <li>Я выражаю свое согласие на необходимое использование и обработку своих персональных данных, в том числе в информационных системах;</li>
+                    <li>Со сроками оказания государственной услуги ознакомлен.</li>
+                  </ul>
+
+                  <label class="radio-item check">
+                    <input class="radio" type="checkbox" name="radio-item">
+                    <span class="check-text">Я подтверждаю свое согласие со всеми вышеперечисленными пунктами</span>
+                  </label>
+                  <label class="radio-item check">
+                    <input class="radio" type="checkbox" name="radio-item">
+                    <span class="check-text">Я уведомлен о том, что результат будет получен в электронном виде</span>
+                  </label>
+
+                  <div class="wrapper-form" id="attention">
+                    <div class="attention">
+                      <img src="img/bell.png" alt="bell">
+                      <span>Пожалуйста, еще раз внимательно проверьте все данные перед отправкой</span>
+                    </div>
+                  </div>
+
+                  <button class="button" id="btn3">
+                    <a class="btn-text" href="#0">Отправить</a>
+                  </button>
+                  <div class="caution">
+                    <p>Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#0">правилами хранения и обработки персональных данных</a></p>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+
+            <div class="form-item hidden" data-state="checked">
+              <div class="wrapper-form checked">
+                <div class="box-number">
+                  <img src="img/check_mark.png" alt="">
+                </div>
+                <h2>Заявление принято</h2>
+              </div>
+              <form action="submit">
+                <div class="form-box" id="accept">
+                  <div class="button-box">
+                    <ul class="accept">
+                      <li>Номер заявления <span>RU-1234567</span>. Максимальный срок предоставления услуги — 20 рабочих дней. Следите за статусом заявления в <a href="#0">Личном кабинете</a>.</li>
+                      <li>Если у вас остались вопросы по оказанию услуги, пожалуйста, обращайтесь по телефону +7 (342) 123-45-67.</li>
+                    </ul>
+                    <div class="button-group">
+                      <button class="button tinyBtn" id="btn4">
+                        <a class="btn-text" href="#0">Вернуться в каталог</a>
+                      </button>
+                      <button class="button tinyBtn" id="whiteBtn">
+                        <a class="btn-text" href="#0">Перейти в личный кабинет</a>
+                      </button>
+                  </div>
+                  </div>
+                </div>     
+              </form>
+            </div>
+          </section>
+      </div>
+    </div>
+  </main>
+
+
+</body>
+
+</html>
+
+
+
+<!-- hidden
+active
+checked
+
+ -->
