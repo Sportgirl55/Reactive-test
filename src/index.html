@@ -50,10 +50,8 @@
 
     <!-- FORM -->
 
-  
-    
-      <div class="container column">
-        <div class="main-wrap" id="main">
+    <div class="container column">
+      <div class="main-wrap" id="main">
 
             <!-- FIRST BLOCK 'CHOOSE' -->
 
@@ -100,186 +98,183 @@
             </div>
           </section>
     
-<!-- SECOND BLOCK 'DATA' -->
-<section class="data">
-  <div class="form-item" data-state="hidden">
-    <div class="wrapper-form closed">
-      <div class="box-number">
-        <span>2</span>
-      </div>
-      <h2>Данные заявителя</h2>
-    </div>
-  </div>
+          <!-- SECOND BLOCK 'DATA' -->
+          <section class="data">
+            <div class="form-item" data-state="hidden">
+              <div class="wrapper-form closed">
+                <div class="box-number">
+                  <span>2</span>
+                </div>
+                <h2>Данные заявителя</h2>
+              </div>
+            </div>
 
-  <div class="form-item hidden" data-state="active">
-    <div class="wrapper-form">
-      <div class="box-number">
-        <span>2</span>
-      </div>
-      <h2>Данные заявителя</h2>
-    </div>
-    <form action="submit">
-      <fieldset class="form-box">
-        <div class="form-group">
-          <p>
-            <label for="surname">Фамилия</label>
-            <input class="field" type="text" name="surname" placeholder="Например: Константинопольский" required>
-          </p>
-        </div>
-        <div class="form-group">
-          <p>
-            <label for="name">Имя</label>
-            <input class="field" type="text" name="name" placeholder="Например: Константин" required>
-          </p>
-        </div>
-        <div class="form-group">
-          <p>
-            <label for="middle-name">Отчество</label>
-            <input class="field" type="text" name="middle-name" placeholder="Например: Константинович" required>
-          </p>
-        </div>
-      
-        <div class="form-group">
-          <p>
-            <label for="name">"Электронная почта</label>
-            <input class="field" type="email" name="email" placeholder="Например: 123@mail.ru" required>
-          </p>
-        </div>
+            <div class="form-item hidden" data-state="active">
+              <div class="wrapper-form">
+                <div class="box-number">
+                  <span>2</span>
+                </div>
+                <h2>Данные заявителя</h2>
+              </div>
+              <form action="submit">
+                <fieldset class="form-box">
+                  <div class="form-group">
+                    <p>
+                      <label for="surname">Фамилия</label>
+                      <input class="field" type="text" name="surname" placeholder="Например: Константинопольский" required>
+                    </p>
+                  </div>
+                  <div class="form-group">
+                    <p>
+                      <label for="name">Имя</label>
+                      <input class="field" type="text" name="name" placeholder="Например: Константин" required>
+                    </p>
+                  </div>
+                  <div class="form-group">
+                    <p>
+                      <label for="middle-name">Отчество</label>
+                      <input class="field" type="text" name="middle-name" placeholder="Например: Константинович" required>
+                    </p>
+                  </div>
+                
+                  <div class="form-group">
+                    <p>
+                      <label for="name">"Электронная почта</label>
+                      <input class="field" type="email" name="email" placeholder="Например: 123@mail.ru" required>
+                    </p>
+                  </div>
 
-        <div class="form-group">
-          <p>
-            <label for="name">Телефон</label>
-            <input class="field" type="tel" name="tel" placeholder="+7" required>
-          </p>
-        </div>
-      </fieldset>
-      <fieldset class="form-box">
-        <legend>Документ, удостоверяющий личность</legend>
-        <div class="form-group">
-          <p>
-            <label for="name">Документ</label>
-            <input class="field" type="text" name="document" placeholder="Например: паспорт" required>
-          </p>
-        </div>
-        <div class="form-group">
-          <p>
-            <label for="name">Серия</label>
-            <input class="field" type="number" min="1000" max="9999" name="series" placeholder="" required>
-          </p>
-        </div>
+                  <div class="form-group">
+                    <p>
+                      <label for="name">Телефон</label>
+                      <input class="field" type="tel" name="tel" placeholder="+7" required>
+                    </p>
+                  </div>
+                </fieldset>
+                <fieldset class="form-box">
+                  <legend>Документ, удостоверяющий личность</legend>
+                  <div class="form-group">
+                    <p>
+                      <label for="name">Документ</label>
+                      <input class="field" type="text" name="document" placeholder="Например: паспорт" required>
+                    </p>
+                  </div>
+                  <div class="form-group">
+                    <p>
+                      <label for="name">Серия</label>
+                      <input class="field" type="number" min="1000" max="9999" name="series" placeholder="" required>
+                    </p>
+                  </div>
 
-        <div class="form-group">
-          <p>
-            <label for="name">Номер</label>
-            <input class="field" type="number" min="100000" max="999999" name="number" placeholder="" required>
-          </p>
-        </div>
+                  <div class="form-group">
+                    <p>
+                      <label for="name">Номер</label>
+                      <input class="field" type="number" min="100000" max="999999" name="number" placeholder="" required>
+                    </p>
+                  </div>
 
-        <legend>Когда выдан</legend>
-        <div class="form-group">
-          <p>
-            <label for="name">День</label>
-            <input class="field" type="number" min="01" max="31" name="date" placeholder="" required>
-          </p>
-        </div>
-        <div class="form-group">
-          <p>
-            <label for="name">Месяц</label>
-            <input class="field" type="number" min="1" max="12" name="month" placeholder="" required>
-          </p>
-        </div>
-   
-        <div class="form-group">
-          <p>
-            <label for="name">Год</label>
-            <input class="field" type="number" name="year" placeholder="" required>
-          </p>
-        </div>
-        <button class="button" id="btn2">
-          <a class="btn-text" href="#0">Продолжить</a>
-        </button>
-      </fieldset>
-    </form>
-  </div>
+                  <legend>Когда выдан</legend>
+                  <div class="form-group">
+                    <p>
+                      <label for="name">День</label>
+                      <input class="field" type="number" min="01" max="31" name="date" placeholder="" required>
+                    </p>
+                  </div>
+                  <div class="form-group">
+                    <p>
+                      <label for="name">Месяц</label>
+                      <input class="field" type="number" min="1" max="12" name="month" placeholder="" required>
+                    </p>
+                  </div>
+            
+                  <div class="form-group">
+                    <p>
+                      <label for="name">Год</label>
+                      <input class="field" type="number" name="year" placeholder="" required>
+                    </p>
+                  </div>
+                  <button class="button" id="btn2">
+                    <a class="btn-text" href="#0">Продолжить</a>
+                  </button>
+                </fieldset>
+              </form>
+            </div>
 
-  <div class="form-item hidden" data-state="checked">
-    <div class="wrapper-form checked">
-      <div class="box-number">
-        <img src="img/check_mark.png" alt="">
-      </div>
-      <h2>Данные заявителя</h2>
-      <div class="change">
-        <a href="#0"><img src="img/change_icon.png" alt="change icon"></a>
-        <a href="#0">Изменить</a>
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="form-item hidden" data-state="checked">
+              <div class="wrapper-form checked">
+                <div class="box-number">
+                  <img src="img/check_mark.png" alt="">
+                </div>
+                <h2>Данные заявителя</h2>
+                <div class="change">
+                  <a href="#0"><img src="img/change_icon.png" alt="change icon"></a>
+                  <a href="#0">Изменить</a>
+                </div>
+              </div>
+            </div>
+          </section>
 
-    <!--     THIRD BLOCK 'CONSENT' -->
-<section class="consent">
-  <div class="form-item" data-state="hidden">
-    <div class="wrapper-form closed">
-      <div class="box-number">
-        <span>3</span>
-      </div>
-      <h2>Согласие</h2>
-    </div>
-  </div>
+          <!--     THIRD BLOCK 'CONSENT' -->
+          <section class="consent">
+            <div class="form-item" data-state="hidden">
+              <div class="wrapper-form closed">
+                <div class="box-number">
+                  <span>3</span>
+                </div>
+                <h2>Согласие</h2>
+              </div>
+            </div>
 
-  <div class="form-item hidden" data-state="active">
-    <div class="wrapper-form">
-      <div class="box-number">
-        <span>3</span>
-      </div>
-      <h2>Согласие</h2>
-    </div>
-    <form action="">
-      <fieldset class="form-box">
-        <h3>Требуется ваше согласие по следующим пунктам:</h3>
-        <ul class="consent">
-          <li>Я подтверждаю, что вся представленная информация является достоверной и точной;</li>
-          <li>Я несу ответственность в соответствии с действующим законодательством Российской Федерации за предоставление заведомо ложных или неполных сведений;</li>
-          <li>Я выражаю свое согласие на необходимое использование и обработку своих персональных данных, в том числе в информационных системах;</li>
-          <li>Со сроками оказания государственной услуги ознакомлен.</li>
-        </ul>
-        <button class="button" id="btn3">
-          <a class="btn-text" href="#0">Отправить</a>
-        </button>
-      </fieldset>
-    </form>
-   
-  </div>
+            <div class="form-item hidden" data-state="active">
+              <div class="wrapper-form">
+                <div class="box-number">
+                  <span>3</span>
+                </div>
+                <h2>Согласие</h2>
+              </div>
+              <form action="">
+                <fieldset class="form-box">
+                  <h3>Требуется ваше согласие по следующим пунктам:</h3>
+                  <ul class="consent">
+                    <li>Я подтверждаю, что вся представленная информация является достоверной и точной;</li>
+                    <li>Я несу ответственность в соответствии с действующим законодательством Российской Федерации за предоставление заведомо ложных или неполных сведений;</li>
+                    <li>Я выражаю свое согласие на необходимое использование и обработку своих персональных данных, в том числе в информационных системах;</li>
+                    <li>Со сроками оказания государственной услуги ознакомлен.</li>
+                  </ul>
+                  <button class="button" id="btn3">
+                    <a class="btn-text" href="#0">Отправить</a>
+                  </button>
+                </fieldset>
+              </form>
+            </div>
 
-  <div class="form-item hidden" data-state="checked">
-    <div class="wrapper-form checked">
-      <div class="box-number">
-        <img src="img/check_mark.png" alt="">
-      </div>
-      <h2>Заявление принято</h2>
-    </div>
-    <form action="">
-      <section class="form-box">
-        <ul class="accept">
-          <li>Номер заявления RU-1234567. Максимальный срок предоставления услуги — 20 рабочих дней. Следите за статусом заявления в Личном кабинете.</li>
-          <li>Если у вас остались вопросы по оказанию услуги, пожалуйста, обращайтесь по телефону +7 (342) 123-45-67.</li>
-        </ul>
-       
-        
-      <div class="button-group">
-        <button class="button tinyBtn" id="btn4">
-          <a class="btn-text" href="#0">Вернуться в каталог</a>
-        </button>
-        <button class="button tinyBtn" id="btn5">
-          <a class="btn-text" href="#0">Перейти в личный кабинет</a>
-        </button>
-      </div>
-
-    </section>
-       
-            </section>
-          </form>
-        </div>
+            <div class="form-item hidden" data-state="checked">
+              <div class="wrapper-form checked">
+                <div class="box-number">
+                  <img src="img/check_mark.png" alt="">
+                </div>
+                <h2>Заявление принято</h2>
+              </div>
+              <form action="">
+                <section class="form-box">
+                  <ul class="accept">
+                    <li>Номер заявления RU-1234567. Максимальный срок предоставления услуги — 20 рабочих дней. Следите за статусом заявления в Личном кабинете.</li>
+                    <li>Если у вас остались вопросы по оказанию услуги, пожалуйста, обращайтесь по телефону +7 (342) 123-45-67.</li>
+                  </ul>
+                
+                  
+                  <div class="button-group">
+                    <button class="button tinyBtn" id="btn4">
+                      <a class="btn-text" href="#0">Вернуться в каталог</a>
+                    </button>
+                    <button class="button tinyBtn" id="btn5">
+                      <a class="btn-text" href="#0">Перейти в личный кабинет</a>
+                    </button>
+                  </div>
+                </section>     
+              </form>
+            </div>
+          </section>
       </div>
     </div>
   </main>
