@@ -64,14 +64,14 @@
               </div>
               <form action="submit">
                 <fieldset class="form-box">
-                  <label class="radio-item" for="radio1">
-                    <input class="radio" type="radio" name="radio-item" id="radio1" value="individual">
+                  <label class="radio-item check" for="radio1" >
+                    <input class="radio" type="radio" name="radio-item" id="radio1" checked>
                     <span class="radio-text-up">Константинопольский К.К.</span><br>
                     <span class="radio-text-down">Физическое лицо</span>
                   </label>
     
                   <label class="radio-item" for="radio2">
-                    <input class="radio" type="radio" name="radio-item" id="radio2" value="individual">
+                    <input class="radio" type="radio" name="radio-item" id="radio2">
                     <span class="radio-text-up">ООО «Константинополь»</span><br>
                     <span class="radio-text-down">Юридическое лицо</span>
                   </label>
@@ -108,7 +108,7 @@
               </div>
             </div>
 
-            <div class="form-item" data-state="active">
+            <div class="form-item hidden" data-state="active">
               <div class="wrapper-form">
                 <div class="box-number">
                   <span>2</span>
@@ -138,7 +138,7 @@
                 
                   <div class="form-group">
                     <p>
-                      <label for="email">"Электронная почта</label>
+                      <label for="email">Электронная почта</label>
                       <input class="field" type="email" name="email" placeholder="Например: 123@mail.ru" required>
                     </p>
                   </div>
@@ -151,7 +151,7 @@
                   </div>
                 </fieldset>
                 <fieldset class="form-box">
-                  <legend>Документ, удостоверяющий личность</legend>
+                  <legend id="document">Документ, удостоверяющий личность</legend>
 
                   <div class="document">
                     <div class="form-group">
@@ -177,25 +177,28 @@
                  
                   <div class="issue-date">
                     <legend>Когда выдан</legend>
-                    <div class="form-group">
-                      <p>
-                        <label for="date">День</label>
-                        <input class="field" type="number" min="01" max="31" name="date" placeholder="" required>
-                      </p>
+                    <div class="wrap-date">
+                      <div class="form-group">
+                        <p>
+                          <label for="date">День</label>
+                          <input class="field" type="number" min="01" max="31" name="date" placeholder="" required>
+                        </p>
+                      </div>
+                      <div class="form-group">
+                        <p>
+                          <label for="month">Месяц</label>
+                          <input class="field" type="number" min="1" max="12" name="month" placeholder="" required>
+                        </p>
+                      </div>
+  
+                      <div class="form-group">
+                        <p>
+                          <label for="year">Год</label>
+                          <input class="field" type="number" name="year" placeholder="" required>
+                        </p>
+                      </div>
                     </div>
-                    <div class="form-group">
-                      <p>
-                        <label for="month">Месяц</label>
-                        <input class="field" type="number" min="1" max="12" name="month" placeholder="" required>
-                      </p>
-                    </div>
-
-                    <div class="form-group">
-                      <p>
-                        <label for="year">Год</label>
-                        <input class="field" type="number" name="year" placeholder="" required>
-                      </p>
-                    </div>
+                   
                   </div>
                   
                   <button class="button" id="btn2">
@@ -230,7 +233,7 @@
               </div>
             </div>
 
-            <div class="form-item hidden" data-state="active">
+            <div class="form-item" data-state="active">
               <div class="wrapper-form">
                 <div class="box-number">
                   <span>3</span>
@@ -247,11 +250,11 @@
                     <li>Со сроками оказания государственной услуги ознакомлен.</li>
                   </ul>
 
-                  <label class="radio-item check">
+                  <label class="check-item">
                     <input class="radio" type="checkbox" name="radio-item">
                     <span class="check-text">Я подтверждаю свое согласие со всеми вышеперечисленными пунктами</span>
                   </label>
-                  <label class="radio-item check">
+                  <label class="check-item">
                     <input class="radio" type="checkbox" name="radio-item">
                     <span class="check-text">Я уведомлен о том, что результат будет получен в электронном виде</span>
                   </label>
@@ -263,7 +266,7 @@
                     </div>
                   </div>
 
-                  <button class="button" id="btn3">
+                  <button class="button" id="agree" disabled="disabled">
                     <a class="btn-text" href="#0">Отправить</a>
                   </button>
                   <div class="caution">
