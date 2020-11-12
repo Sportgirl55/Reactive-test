@@ -296,7 +296,9 @@ form {
     margin-left: 96px;
     max-width: 448px;
     legend {
-      font-weight: normal;
+      @include boldText();
+      margin-bottom: $commonMargin;
+      padding-top: 8px;
     }
     .form-group {
       background: $white-text;
@@ -310,11 +312,7 @@ form {
         margin-top: 8px;
       }
     }
-    #document {
-      @include boldText();
-      margin-bottom: $commonMargin;
-      padding-top: 8px;
-    }
+   
     .radio {
       position: absolute;
       clip: rect(1px, 1px, 1px, 1px);
@@ -337,48 +335,145 @@ form {
       box-shadow: 0 0 0 2px $blueBtn;
      
     }
+    
+    
+    
+    
+  .radio-item {
+	display: block;
+	padding: $commonMargin;
+  margin-bottom: $commonMargin;
+  border-radius: 4px;
+	position: relative;
+}
+.radio-item input[type="radio"] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+.radio-item .radio-text-up {
+  display: inline-block;
+  font-weight: bold;
+	position: relative; 
+	padding: 0 0 0 32px; 
+}
+.radio-item .radio-text-up:before {
+	content: "";
+	display: inline-block;
+	margin-right: 10px;
+  width: 20px;
+  height: 20px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(../img/radio_no_checked.png) 0 0 no-repeat;
+}
+ 
+
+.radio-item input[type="radio"]:checked + .radio-text-up:before {
+	background-image: url(../img/radio_checked.png);
+}
+    
+    
+    
+  .check-item {
+	display: block;
+	padding: $commonMargin;
+  margin-bottom: $commonMargin;
+  border-radius: 4px;
+	position: relative;
+}
+.check-item input[type="checkbox"] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+.check-item span {
+	display: inline-block;
+	position: relative; 
+	padding: 0 0 0 32px; 
+}
+.check-item span:before {
+	content: "";
+	display: inline-block;
+	margin-right: 10px;
+  width: 20px;
+  height: 20px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(../img/qube.png) 0 0 no-repeat;
+}
+ 
+/* Checked */
+.check-item input[type="checkbox"]:checked + span:before {
+	background-image: url(../img/check_mark.png);
+}
+    
+    
  
     .radio-item:not(.check), .check-item:not(.check) {
       background: $input;
     }
-    .radio-item, .check-item {
-      padding: $commonMargin;
-      margin-bottom: $commonMargin;
-      border-radius: 4px;
-      .radio-text-up {
-        font-weight: 700;
-        &:before {
-          content: "";
-          display: inline-block;
-          vertical-align: middle;
-          margin-right: 12px;
-          width: 20px;
-          height: 20px;
-          background-image: url(../img/radio_no_checked.png);
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-size: 20px;
-        }
-      }
-      .check-text {
-        &:before {
-          content: "";
-          display: inline-block;
-          vertical-align: middle;
-          margin-right: 10px;
-          width: 20px;
-          height: 20px;
-          background-image: url(../img/qube.png);
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-size: 20px;
-        }
-      }
+//    .radio-item, .check-item {
+//      padding: $commonMargin;
+//      margin-bottom: $commonMargin;
+//      border-radius: 4px;
+//      .radio-text-up {
+//        font-weight: 700;
+//        &:before {
+//          content: "";
+//          display: inline-block;
+//          vertical-align: middle;
+//          margin-right: 12px;
+//          width: 20px;
+//          height: 20px;
+//          background-image: url(../img/radio_no_checked.png);
+//          background-repeat: no-repeat;
+//          background-position: center center;
+//          background-size: 20px;
+//        }
+//      }
+//      .check-text {
+//        &:before {
+//          content: "";
+//          display: inline-block;
+//          vertical-align: middle;
+//          margin-right: 10px;
+//          width: 20px;
+//          height: 20px;
+//          background-image: url(../img/qube.png);
+//          background-repeat: no-repeat;
+//          background-position: center center;
+//          background-size: 20px;
+//        }
+//      }
       .radio-text-down {
         padding-left: 32px;
       }
-     
-    }
+//     
+//    }
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
     .consent {
@@ -407,6 +502,7 @@ form {
       background: $blueBtn;
       border-radius: 4px;
       margin-bottom: 24px;
+      width: 100%;
       border: none;
       
       .btn-text {
@@ -468,6 +564,7 @@ form {
   }
   #accept {
     max-width: 556px;
+    margin: 0 calc((100% - 446px)/3); 
   }
 }
 
@@ -497,3 +594,466 @@ h3 {
 
 
 
+//Самый старый вариант
+
+
+//$gray: #e5e5e5;
+//$gray-text: #3b4256;
+//$gray-close: #bcc3ca;
+//$blue: #3684e2;
+//$blueBtn: #0061d9;
+//$white-text: #ffffff;
+//$input: #f5f5f7;
+//
+//$border: 1px solid red;
+//$border1: 1px solid blue;
+//
+//$front: "GOST UI 2", Arial, sans-serif;
+//$size: 18px;
+//$offset: 48px;
+//
+//$paddingT: 16px;
+//$margin: 16px 32px 16px 16px;
+//
+//@mixin flex() {
+//  display: flex;
+//  align-items: center;
+//}
+//
+//@mixin normalText() {
+//  font-family: $front;
+//  font-weight: normal;
+//  line-height: 24px;
+//  font-size: $size;
+//}
+//
+//@mixin boldText() {
+//  line-height: 24px;
+//  color: $gray-text;
+//  font-weight: bold;
+//  font-family: $front;
+//  font-size: 18px;
+//}
+//
+//@mixin SFbold() {
+//  font-family: "SF Pro Display", Arial, sans-serif;
+//  font-size: 21px;
+//  font-weight: 700;
+//  line-height: 32px;
+//  letter-spacing: 0em;
+//}
+//
+//@mixin numbers() {
+//  font-family: "SF Pro Display", Arial, sans-serif;
+//  font-size: 22px;
+//  line-height: 28px;
+//  color: $white-text;
+//}
+//@mixin tinyText() {
+//  font-family: $front;
+//  font-size: 14px;
+//  line-height: 20px;
+//  letter-spacing: 0em;
+//}
+//
+//@mixin container() {
+//  max-width: 1120px;
+//  margin: 0 auto;
+//} 
+//
+//%number-circle {
+//  width: $offset;
+//  height: $offset;
+//  margin: $margin;
+//  background-image: url("../img/ellipse_blue.png");
+//  display: flex;
+//  span {
+//    font-family: "SF Pro Display";
+//    font-size: 22px;
+//    line-height: 28px;
+//    color: $white-text;
+//    margin: auto;
+//  }
+//}
+//
+//@font-face {
+//  font-family: "SF Pro Display";
+//  src: url("../fonts/SFPro/SFProDisplay-Bold.woff2");
+//  font-weight: 700;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: "GOST UI 2";
+//  src: url("../fonts/GOST 2.304 A/GostUI_Regular.TTF");
+//  font-weight: 400;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: "GOST UI 2";
+//  src: url("../fonts/GOST 2.304 A/GostUI_Bold_G.TTF");
+//  font-weight: 700;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: "GOST UI 2";
+//  src: url("../fonts/GOST 2.304 A/GostUI_Medium.TTF");
+//  font-weight: 600;
+//  font-style: normal;
+//}
+//
+//* {
+//  margin: 0;
+//  padding: 0;
+//  box-sizing: border-box;
+//}
+//
+//body {
+//  margin: auto;
+//  background: $gray;
+//  color: $gray-text;
+//  font-family: $front;
+//  font-size: $size;
+//  a {
+//    text-decoration: none;
+//    color: $blue;
+// 
+//  }
+//}
+//
+//header {
+//  background: $blue;
+//  color: $white-text;
+//  position: fixed;
+//  width: 100%;
+//  top: 0;
+//  left: 0;
+//  span {
+//    font-weight: 700;
+//  }
+//  a {
+//    color: $white-text;
+//  }
+//}
+//
+//.container {
+//  @include container();
+//  // padding-bottom: 288px;
+//
+//  .wrap {
+//    @include flex();
+//    padding: 16px 0;
+//    justify-content: space-between;
+//    .login {
+//      @include flex();
+//      img {
+//        opacity: 0.5;
+//      }
+//      .username {
+//        padding: 0 28px 0 15px;
+//      }
+//    }
+//    .upper-logo {
+//      @include flex();
+//      span {
+//        margin-left: 21px;
+//      }
+//    }
+//  }
+//}
+//
+//
+//main {
+//  padding-top: 152px;
+//  .text {
+//    border-bottom: 1px solid rgba(59, 66, 86, 0.3);
+//    flex-direction: row;
+//    p {
+//      line-height: 1.33333em;
+//       padding-bottom: 40px;
+//    }
+//  }
+//  .column {
+//    flex-direction: column;
+//    padding-top: 40px;
+//    padding-bottom: 288px;
+//  }
+//
+//  .container {
+//    display: flex;   
+//    .main-wrap {
+//      max-width: 736px;
+//      margin-right: 126px;
+//
+//      h1 {
+//        font-family: "SF Pro Display", Arial, sans-serif;
+//        font-size: $offset;
+//        line-height: 56px;
+//        padding-bottom: 0.5em;
+//      }
+//     
+//    }
+//    .form-item {
+//      background: $white-text;
+//      margin-bottom: 24px;
+//      border-radius: 4px;
+//   
+//      h2 {
+//        @include SFbold();
+//      }
+//      .box-number {
+//        @extend %number-circle;
+//      }
+//      .wrapper-form {
+//        display: flex;
+//        align-items: baseline;
+//        .attention {
+//          display: flex;
+//          align-items: flex-start;
+//          background: #FFF5E6;
+//          border-radius: 4px;
+//          padding: 16px 20px 24px 20px;
+//       
+//          img {
+//            padding-right: 16px;
+//          }
+//        }
+//      }
+//
+//      #attention {
+//        margin-bottom: $paddingT;
+//      }
+//     
+//      .closed {
+//        h2 {
+//          color: $gray-close;
+//        }
+//        .box-number {
+//          background-image: url("../img/ellipse_gray.png");
+//        }
+//      }
+//      .checked {
+//        .box-number {
+//          background-image: url("../img/ellipse_checked.png");
+//          img {
+//            margin: auto;
+//          }
+//        }
+//        .change {
+//          @include tinyText();
+//          color: $blueBtn;
+//          display: flex;
+//          align-items: flex-start;
+//          margin-right: 16px;
+//          margin-left: auto;
+//          a {
+//            padding-left: 7px;
+//            color: $blueBtn;
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//.logo {
+//  img {
+//    margin: $paddingT 0;
+//  }
+//  span {
+//    display: block;
+//    font-size: medium;
+//    font-weight: 700;
+//    line-height: 20px;
+//  }
+//  span:last-child {
+//    font-weight: 400;
+//    font-size: 14px;
+//  }
+//}
+//
+//form {
+//  input {
+//    max-width: 448px;
+//    border-radius: 4px;
+//    height: $offset;
+//  }
+//  .form-box {
+//    display: flex;
+//    flex-direction: column;
+//    margin-left: 96px;
+//    max-width: 448px;
+//    legend {
+//      @include boldText();
+//    }
+//    .radio {
+//      position: absolute;
+//      clip: rect(1px, 1px, 1px, 1px);
+//      height: 1px;
+//      width: 1px;
+//      &:checked ~ .radio-text-up::before {
+//        background-image: url(../img/radio_checked.png);
+//      }
+//      &:checked ~ .check-text::before {
+//        background: $blueBtn;
+//        background-image: url(../img/check_mark.png);
+//        background-repeat: no-repeat;
+//        background-position: center center;
+//        background-size: 15px;
+//      
+//      }
+//    }
+//    .check {
+//      background: $white-text;
+//      box-shadow: 0 0 0 2px $blueBtn;
+//     
+//    }
+// 
+//    .radio-item:not(.check) {
+//      background: $input;
+//    }
+//    .radio-item {
+//      padding: $paddingT;
+//      margin-bottom: $paddingT;
+//      border-radius: 4px;
+//      .radio-text-up {
+//        font-weight: 700;
+//        &:before {
+//          content: "";
+//          display: inline-block;
+//          vertical-align: middle;
+//          margin-right: 12px;
+//          width: 20px;
+//          height: 20px;
+//          background-image: url(../img/radio_no_checked.png);
+//          background-repeat: no-repeat;
+//          background-position: center center;
+//          background-size: 20px;
+//        }
+//      }
+//      .check-text {
+//        &:before {
+//          content: "";
+//          display: inline-block;
+//          vertical-align: middle;
+//          margin-right: 10px;
+//          width: 20px;
+//          height: 20px;
+//          background-image: url(../img/qube.png);
+//          background-repeat: no-repeat;
+//          background-position: center center;
+//          background-size: 20px;
+//        }
+//      }
+//      .radio-text-down {
+//        padding-left: 32px;
+//      }
+//     
+//    }
+//    .form-group {
+//      background: $white-text;
+//      .form-item {
+//        @include normalText();
+//      
+//      }
+//     
+//      .field {
+//        width: -webkit-fill-available;
+//        border: 1px solid rgba(59, 66, 86, 0.5);
+//        
+//      }
+//    }
+//
+//    .consent {
+//      margin-bottom: 24px;
+//      li {
+//        margin-top: 8px;
+//        list-style-position: inside;
+//      }
+//    }
+//    .accept {
+//      margin-bottom: 24px;
+//   
+//      li {
+//        margin-bottom: 8px;
+//        list-style-type: none;
+//        span {
+//          font-weight: bold;
+//        }
+//      }
+//    }
+//
+//    // .button-box {
+//    //   width: 556px;
+//    // }
+//
+//   
+//  
+//
+//    .button {
+//      background: $blueBtn;
+//      border-radius: 4px;
+//      margin-bottom: 24px;
+//      border: none;
+//      
+//      .btn-text {
+//        display: block;
+//        padding: 12px 0;
+//        @include normalText();
+//        color: $white-text;
+//      }
+//    }
+//    .button-group {
+//      display: flex;
+//      justify-content: space-between;
+//      margin-bottom: $paddingT;
+//      .tinyBtn {
+//        width: calc(50% - 32px);
+//      }
+//      #whiteBtn {
+//        background: $white-text;
+//        box-shadow: 0 0 0 1px $blueBtn;
+//        .btn-text {
+//          color: $blueBtn;
+//        }
+//      }
+//    }
+//  }
+//  #accept {
+//    max-width: 556px;
+//  }
+//}
+//
+//
+//
+//fieldset {
+//  border: none;
+//}
+//
+//h3 {
+//  @include boldText();
+//}
+//
+//.hidden {
+//  display: none;
+//}
+//
+//
+//
+//.caution {
+//  margin-bottom: 24px;
+//  p {
+//    @include tinyText();
+//  }
+//}
+//
+//
+//.document {
+//
+//}
+//
+//.issue-date {
+//
+//}

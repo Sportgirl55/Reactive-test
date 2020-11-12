@@ -75,8 +75,8 @@
                     <span class="radio-text-up">ООО «Константинополь»</span><br>
                     <span class="radio-text-down">Юридическое лицо</span>
                   </label>
-                  <button class="button" id="btn1">
-                    <a class="btn-text" href="#0">Продолжить</a>
+                  <button class="button" type="button">
+                    <span class="btn-text">Продолжить</span>
                   </button>
                 </fieldset>
               </form>
@@ -120,89 +120,89 @@
                   <div class="form-group">
                     <p>
                       <label for="surname">Фамилия</label>
-                      <input class="field" type="text" name="surname" placeholder="Например: Константинопольский" required>
+                      <input class="field" id="surname" type="text" name="surname" placeholder="Например: Константинопольский" required>
                     </p>
                   </div>
                   <div class="form-group">
                     <p>
                       <label for="name">Имя</label>
-                      <input class="field" type="text" name="name" placeholder="Например: Константин" required>
+                      <input class="field" id="name" type="text" name="name" placeholder="Например: Константин" >
                     </p>
                   </div>
                   <div class="form-group">
                     <p>
                       <label for="middle-name">Отчество</label>
-                      <input class="field" type="text" name="middle-name" placeholder="Например: Константинович" required>
+                      <input class="field" id="middle-name" type="text" name="middle-name" placeholder="Например: Константинович" >
                     </p>
                   </div>
                 
                   <div class="form-group">
                     <p>
                       <label for="email">Электронная почта</label>
-                      <input class="field" type="email" name="email" placeholder="Например: 123@mail.ru" required>
+                      <input class="field" id="email" type="email" name="email" placeholder="Например: 123@mail.ru">
                     </p>
                   </div>
 
                   <div class="form-group">
                     <p>
                       <label for="tel">Телефон</label>
-                      <input class="field" type="tel" name="tel" placeholder="+7" required>
+                      <input class="field" id="tel" type="tel" name="tel" placeholder="+7">
                     </p>
                   </div>
                 </fieldset>
                 <fieldset class="form-box">
-                  <legend id="document">Документ, удостоверяющий личность</legend>
+                  <legend>Документ, удостоверяющий личность</legend>
 
                   <div class="document">
                     <div class="form-group">
                       <p>
                         <label for="document">Документ</label>
-                        <input class="field" type="text" name="document" placeholder="Например: паспорт" required>
+                        <input class="field" id="document" type="text" name="document" placeholder="Например: паспорт" >
                       </p>
                     </div>
                     <div class="form-group">
                       <p>
                         <label for="series">Серия</label>
-                        <input class="field" type="number" min="1000" max="9999" name="series" placeholder="" required>
+                        <input class="field" id="series" type="number" min="1000" max="9999" name="series" placeholder="">
                       </p>
                     </div>
   
                     <div class="form-group">
                       <p>
                         <label for="number">Номер</label>
-                        <input class="field" type="number" min="100000" max="999999" name="number" placeholder="" required>
+                        <input class="field" id="number" type="number" min="100000" max="999999" name="number" placeholder="">
                       </p>
                     </div>
                   </div>
                  
                   <div class="issue-date">
-                    <legend>Когда выдан</legend>
+                    <span>Когда выдан</span>
                     <div class="wrap-date">
                       <div class="form-group">
                         <p>
                           <label for="date">День</label>
-                          <input class="field" type="number" min="01" max="31" name="date" placeholder="" required>
+                          <input class="field" id="date" type="number" min="01" max="31" name="date" placeholder="">
                         </p>
                       </div>
                       <div class="form-group">
                         <p>
                           <label for="month">Месяц</label>
-                          <input class="field" type="number" min="1" max="12" name="month" placeholder="" required>
+                          <input class="field" id="month" type="number" min="1" max="12" name="month" placeholder="">
                         </p>
                       </div>
   
                       <div class="form-group">
                         <p>
                           <label for="year">Год</label>
-                          <input class="field" type="number" name="year" placeholder="" required>
+                          <input class="field" id="year" type="number" name="year" placeholder="">
                         </p>
                       </div>
                     </div>
                    
                   </div>
                   
-                  <button class="button" id="btn2">
-                    <a class="btn-text" href="#0">Продолжить</a>
+                  <button class="button" type="button">
+                    <span class="btn-text">Продолжить</span>
                   </button>
                 </fieldset>
               </form>
@@ -233,14 +233,14 @@
               </div>
             </div>
 
-            <div class="form-item" data-state="active">
+            <div class="form-item hidden" data-state="active">
               <div class="wrapper-form">
                 <div class="box-number">
                   <span>3</span>
                 </div>
                 <h2>Согласие</h2>
               </div>
-              <form action="">
+              <form action="submit">
                 <fieldset class="form-box">
                   <h3>Требуется ваше согласие по следующим пунктам:</h3>
                   <ul class="consent">
@@ -251,11 +251,11 @@
                   </ul>
 
                   <label class="check-item">
-                    <input class="radio" type="checkbox" name="radio-item">
+                    <input class="radio" type="checkbox" name="radio-item" id="check-1">
                     <span class="check-text">Я подтверждаю свое согласие со всеми вышеперечисленными пунктами</span>
                   </label>
                   <label class="check-item">
-                    <input class="radio" type="checkbox" name="radio-item">
+                    <input class="radio" type="checkbox" name="radio-item" id="check-2">
                     <span class="check-text">Я уведомлен о том, что результат будет получен в электронном виде</span>
                   </label>
 
@@ -266,8 +266,8 @@
                     </div>
                   </div>
 
-                  <button class="button" id="agree" disabled="disabled">
-                    <a class="btn-text" href="#0">Отправить</a>
+                  <button class="button" type="button" id="agree" disabled="disabled">
+                    <span class="btn-text">Отправить</span>
                   </button>
                   <div class="caution">
                     <p>Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#0">правилами хранения и обработки персональных данных</a></p>
@@ -291,11 +291,11 @@
                       <li>Если у вас остались вопросы по оказанию услуги, пожалуйста, обращайтесь по телефону +7 (342) 123-45-67.</li>
                     </ul>
                     <div class="button-group">
-                      <button class="button tinyBtn" id="btn4">
-                        <a class="btn-text" href="#0">Вернуться в каталог</a>
+                      <button class="button tinyBtn" type="button">
+                        <span class="btn-text">Вернуться в каталог</span>
                       </button>
-                      <button class="button tinyBtn" id="whiteBtn">
-                        <a class="btn-text" href="#0">Перейти в личный кабинет</a>
+                      <button class="button tinyBtn" type="button" id="whiteBtn">
+                        <span class="btn-text">Перейти в личный кабинет</span>
                       </button>
                   </div>
                   </div>
@@ -306,8 +306,6 @@
       </div>
     </div>
   </main>
-
-
 </body>
 
 </html>

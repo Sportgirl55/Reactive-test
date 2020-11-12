@@ -44,8 +44,7 @@ body {
   font-size: 18px; }
   body a {
     text-decoration: none;
-    color: #3684e2;
-   }
+    color: #3684e2; }
 
 header {
   background: #3684e2;
@@ -161,18 +160,35 @@ main {
 form input {
   max-width: 448px;
   border-radius: 4px;
-  height: 48px; }
+  height: 48px;
+  text-indent: 10px; }
 form .form-box {
   display: flex;
   flex-direction: column;
   margin-left: 96px;
-  max-width: 448px; }
+  max-width: 448px;
+  /* Checked */ }
   form .form-box legend {
     line-height: 24px;
     color: #3b4256;
     font-weight: bold;
     font-family: "GOST UI 2", Arial, sans-serif;
-    font-size: 18px; }
+    font-size: 18px;
+    margin-bottom: 16px;
+    padding-top: 8px; }
+  form .form-box .form-group {
+    background: #ffffff;
+    margin-bottom: 16px; }
+    form .form-box .form-group .form-item {
+      font-family: "GOST UI 2", Arial, sans-serif;
+      font-weight: normal;
+      line-height: 24px;
+      font-size: 18px;
+      color: #3b4256; }
+    form .form-box .form-group .field {
+      width: -webkit-fill-available;
+      border: 1px solid rgba(59, 66, 86, 0.5);
+      margin-top: 8px; }
   form .form-box .radio {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
@@ -189,52 +205,73 @@ form .form-box {
   form .form-box .check {
     background: #ffffff;
     box-shadow: 0 0 0 2px #0061d9; }
-  form .form-box .radio-item:not(.check) {
-    background: #f5f5f7; }
   form .form-box .radio-item {
+    display: block;
     padding: 16px;
     margin-bottom: 16px;
-    border-radius: 4px; }
-    form .form-box .radio-item .radio-text-up {
-      font-weight: 700; }
-      form .form-box .radio-item .radio-text-up:before {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 12px;
-        width: 20px;
-        height: 20px;
-        background-image: url(../img/radio_no_checked.png);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 20px; }
-    form .form-box .radio-item .check-text:before {
-      content: "";
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 10px;
-      width: 20px;
-      height: 20px;
-      background-image: url(../img/qube.png);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 20px; }
-    form .form-box .radio-item .radio-text-down {
-      padding-left: 32px; }
-  form .form-box .form-group {
-    background: #ffffff; }
-    form .form-box .form-group .form-item {
-      font-family: "GOST UI 2", Arial, sans-serif;
-      font-weight: normal;
-      line-height: 24px;
-      font-size: 18px; }
-    form .form-box .form-group .field {
-      width: -webkit-fill-available;
-      border: 1px solid rgba(59, 66, 86, 0.5); }
+    border-radius: 4px;
+    position: relative; }
+  form .form-box .radio-item input[type="radio"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0; }
+  form .form-box .radio-item .radio-text-up {
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 32px; }
+  form .form-box .radio-item .radio-text-up:before {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/radio_no_checked.png) 0 0 no-repeat; }
+  form .form-box .radio-item input[type="radio"]:checked + .radio-text-up:before {
+    background-image: url(../img/radio_checked.png); }
+  form .form-box .check-item {
+    display: block;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    position: relative; }
+  form .form-box .check-item input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0; }
+  form .form-box .check-item span {
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 32px; }
+  form .form-box .check-item span:before {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/qube.png) 0 0 no-repeat; }
+  form .form-box .check-item input[type="checkbox"]:checked + span:before {
+    background-image: url(../img/check_mark.png); }
+  form .form-box .radio-item:not(.check), form .form-box .check-item:not(.check) {
+    background: #f5f5f7; }
+  form .form-box .radio-text-down {
+    padding-left: 32px; }
   form .form-box .consent {
     margin-bottom: 24px; }
     form .form-box .consent li {
       margin-top: 8px;
+      padding-right: 2px;
       list-style-position: inside; }
   form .form-box .accept {
     margin-bottom: 24px; }
@@ -247,6 +284,7 @@ form .form-box {
     background: #0061d9;
     border-radius: 4px;
     margin-bottom: 24px;
+    width: 100%;
     border: none; }
     form .form-box .button .btn-text {
       display: block;
@@ -255,6 +293,7 @@ form .form-box {
       font-weight: normal;
       line-height: 24px;
       font-size: 18px;
+      color: #3b4256;
       color: #ffffff; }
   form .form-box .button-group {
     display: flex;
@@ -267,8 +306,32 @@ form .form-box {
       box-shadow: 0 0 0 1px #0061d9; }
       form .form-box .button-group #whiteBtn .btn-text {
         color: #0061d9; }
+  form .form-box .document {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    form .form-box .document p {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+    form .form-box .document input[type="text"] {
+      width: 100vh; }
+    form .form-box .document input[name="series"] {
+      width: 160px; }
+    form .form-box .document input[name="number"] {
+      width: 256px; }
+  form .form-box .issue-date .wrap-date {
+    display: flex; }
+    form .form-box .issue-date .wrap-date label {
+      color: #848E99; }
+    form .form-box .issue-date .wrap-date .field:not([name="year"]) {
+      width: 120px;
+      margin-right: 16px; }
+    form .form-box .issue-date .wrap-date input[name="year"] {
+      width: 176px; }
 form #accept {
-  max-width: 556px; }
+  max-width: 556px;
+  margin: 0 calc((100% - 446px)/3); }
 
 fieldset {
   border: none; }
